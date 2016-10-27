@@ -35,10 +35,10 @@ sudo sed -i -e 's/bind-address.*/bind-address=0.0.0.0/' /etc/mysql/my.cnf
 sudo service mysql restart
 
 # Setup Maria DB
-mysql -u root -p$MYSQL_PASS <<MYSQL_SCRIPT
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'10.0.%.%' IDENTIFIED BY '$MYSQL_PASS' WITH GRANT OPTION;
-CREATE DATABASE IF NOT EXISTS nossafreguesia;
-CREATE USER 'nfmysqluser'@'10.0.%.%' IDENTIFIED BY 'BSgAHhn3+GrR';
-GRANT ALL PRIVILEGES ON nossafreguesia.* TO 'nfmysqluser'@'10.0.%.%';
-FLUSH PRIVILEGES;
-MYSQL_SCRIPT
+# mysql -u root -p$MYSQL_PASS <<MYSQL_SCRIPT
+# GRANT ALL PRIVILEGES ON *.* TO 'root'@'10.0.%.%' IDENTIFIED BY '$MYSQL_PASS' WITH GRANT OPTION;
+# CREATE DATABASE IF NOT EXISTS nossafreguesia;
+# CREATE USER 'nfmysqluser'@'10.0.%.%' IDENTIFIED BY 'BSgAHhn3+GrR';
+# GRANT ALL PRIVILEGES ON nossafreguesia.* TO 'nfmysqluser'@'10.0.%.%';
+# FLUSH PRIVILEGES;
+# MYSQL_SCRIPT
